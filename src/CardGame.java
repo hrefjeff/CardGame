@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 /***************************************************************
 Names       : Jeffrey Allen
 Class       : CS315, Graphical User Interface
@@ -8,9 +6,8 @@ Description : Abstract class that card games can inherit from
 ***************************************************************/
 public abstract class CardGame {
 
-	Deck deck;
-	Player players[];
-	
+	public Deck deck;
+	public Player[] P;
 	
 	// ~~~~~~~~~~~~~~~~~~Constructors~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	
@@ -28,22 +25,10 @@ public abstract class CardGame {
 	 Params     : Amount of players in the game
 	 Return     : N/A
 	===============================================================*/
-	CardGame(int playerCount)
-	{
-	
-		// Initialize deck 
-		ArrayList cards = new ArrayList(); 
-		while (deck.hasNext())
-		{ 
-			ICard card = (ICard)deck.next(); 
-			System.out.println(card); 
-			cards.add(card); 
-		} 
-
-		
-		initializePlayers(playerCount);
-		
-		deal();
+	CardGame(int numOfPlayers)
+	{ 	
+		deck = new Deck();
+		initializePlayers(numOfPlayers);
 	}
 	
 	// ~~~~~~~~~~~~~~~~~~~~~~Abstract Methods~~~~~~~~~~~~~~~~~~~~~~~~
@@ -56,7 +41,6 @@ public abstract class CardGame {
 	===============================================================*/
 	abstract void displayRules();
 	
-	
 	/*==============================================================
 	 Writer     : Jeffrey Allen
 	 Purpose    : Deals cards to players
@@ -67,23 +51,5 @@ public abstract class CardGame {
 	
 	// ~~~~~~~~~~~~~~~~~Private Methods~~~~~~~~~~~~~~~~~~~~~
 	
-	/*==============================================================
-	 Writer     : Jeffrey Allen
-	 Purpose    : Initialize the players of the game
-	 Params     : Amount of players in the game
-	 Return     : N/A
-	===============================================================*/
-	private void initializePlayers(int numOfPlayers)
-	{
-		for (int i = 0; i < numOfPlayers; i++)
-			players[i] = new Player();
-	}
-	
-	private void initializeDeck()
-	{
-	}
-	
-
-	// ~~~~~~~~~~~~~~~~~Public Methods~~~~~~~~~~~~~~~~~~~~~~
 	
 }

@@ -1,13 +1,13 @@
-// TODO:
-// 1) Remove a card from the hand
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Iterator;
-
+/***************************************************************
+Names       : Jeffrey Allen
+Class       : CS315, Graphical User Interface
+Assignment  : Assignment 1, Card Game
+Description : This class is a player that wields a single hand
+***************************************************************/
 public class Player {
 
-	List<Card> hand = new ArrayList<Card>();
+	private int score;
+	public Hand playersHand;
 	
 	/*==============================================================
 	 Writer     : Jeffrey Allen
@@ -15,38 +15,34 @@ public class Player {
 	 Params     : N/A
 	 Return     : N/A
 	===============================================================*/
-	Player(){}
-
-	/*==============================================================
-	 Writer     : Jeffrey Allen
-	 Purpose    : Displays the cards a player has in their hand
-	 Params     : N/A
-	 Return     : N/A
-	===============================================================*/
-	@SuppressWarnings("unused")
-	private void displayHand()
+	Player()
 	{
-		int i = 0;
-		Iterator<Card> it=hand.iterator();
-
-        while(it.hasNext())
-        {
-          Card value = (Card)it.next();
-          System.out.println("Card " + i + ": " +value);
-          i++;
-        }
+		score = 0;
+		playersHand = new Hand();
 	}
 	
 	/*==============================================================
 	 Writer     : Jeffrey Allen
-	 Purpose    : Adds card to hand
+	 Purpose    : Get score
 	 Params     : N/A
 	 Return     : N/A
 	===============================================================*/
-    public void addCard(int suit, int value)
-    {
-    	Card addedCard = new Card(suit, value);
-    	hand.add(addedCard);
-    }
+	@SuppressWarnings("unused")
+	private int getScore()
+	{
+		return score;
+	}
 	
+	/*==============================================================
+	 Writer     : Jeffrey Allen
+	 Purpose    : Set Score
+	 Params     : N/A
+	 Return     : N/A
+	===============================================================*/
+	@SuppressWarnings("unused")
+	private void setScore(int updatedScore)
+	{
+		score = updatedScore;
+	}
+
 }
