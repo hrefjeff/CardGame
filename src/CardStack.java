@@ -64,7 +64,7 @@ public abstract class CardStack implements Iterator<Card> {
 	{
 		for (int i=0; i<cardStack.size(); i++)
 		{
-			System.out.println(cardStack.get(i));
+			System.out.println("Card " + (i+1) + ":" + cardStack.get(i));
 		}
 	}
 

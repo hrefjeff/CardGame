@@ -6,7 +6,7 @@ Description : This is a card interface that describes a card with
  			  a value and a suit
 Reference   : www.cs.duke.edu
 ***************************************************************/
-public interface ICard extends Comparable {
+public interface ICard extends Comparable<Object> {
 
 	public static final int SPADES = 0; 
 	public static final int HEARTS = 1; 

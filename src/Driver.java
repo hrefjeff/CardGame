@@ -3,11 +3,8 @@ public class Driver {
 	
 		public static void main(String[] args) {
 
-			// ****Collect information for initialization of game****
-
 			// 1) Pick between games by taking choice input
 			System.out.println("Which game would you like to play today?");
-			System.out.println("Choices:");
 			System.out.println("\tG: Go Fish");
 			System.out.println("\tW: War");
 
@@ -23,12 +20,13 @@ public class Driver {
 			int numberOfPlayers = user_input.nextInt();
 
 			// Initialize game player picked
-			if (gameChoice == 'W' || gameChoice == 'w' ) {
+			if (gameChoice == 'W' || gameChoice == 'w' )
+			{
 				War warGame = new War(numberOfPlayers);
-				
-				warGame.P[1].playersHand.addCard(1,3);
 				warGame.P[1].playersHand.displayCards();
+			} else {
+				GoFish goFishGame = new GoFish(numberOfPlayers);
+				goFishGame.P[1].playersHand.displayCards();
 			}
-			
 		}
 }

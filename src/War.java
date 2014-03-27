@@ -1,4 +1,3 @@
-
 public class War extends CardGame {
 	
 	War(){
@@ -20,23 +19,17 @@ public class War extends CardGame {
 	{
 		int playerCycle = 1;
 		Card dealingCard;
-		System.out.println("Num of players: " + P.length);
 		
-		// Iterate through deck
+		// Iterate through whole deck
 		for (int i=0; i<52; i++)
 		{
-			// Remove the card off the top of the deck
 			dealingCard = deck.removeCard();
-			
-			// Add that card to someone's hand
 			P[playerCycle].playersHand.addCard(dealingCard);
 			
-			// If cycle equals amount of players
-			if (playerCycle == (P.length)) 
-				playerCycle = 0;
-			
-			// Increment cycle
 			playerCycle++;
+			
+			if (playerCycle == (P.length)) 
+				playerCycle = 1;
 		}
 	}
 

@@ -116,7 +116,8 @@ public class Card implements ICard {
 	
 	/*==============================================================
 	Writer     : Jeffrey Allen
-	Purpose    : Place holder because I won't be comparing two objects 
+	Purpose    : Place holder because I won't be comparing two objects
+	 			 for this project
 	Params     : Place holder
 	Return     : Place holder
 	===============================================================*/
@@ -124,6 +125,4 @@ public class Card implements ICard {
 	{
 	    return true;
 	}
-
-	
 }
