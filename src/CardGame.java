@@ -2,7 +2,8 @@
 Names       : Jeffrey Allen
 Class       : CS315, Graphical User Interface
 Assignment  : Assignment 1, Card Game
-Description : Abstract class that card games can inherit from
+Description : Abstract card game class that specific games can
+			  inherit from to create a card game
 ********************************************************************/
 public abstract class CardGame {
 
@@ -49,7 +50,7 @@ public abstract class CardGame {
 	=====================================================*/
 	abstract void deal();
 	
-	// ~~~~~~~~~~~~~~~~~~~~~~~Private Methods~~~~~~~~~~~~~~~~~~~~~~~~~
+	// ~~~~~~~~~~~~~~~~~~~~~~~Public Methods~~~~~~~~~~~~~~~~~~~~~~~~~
 	
 	/*====================================================
 	 Writer     : Jeffrey Allen
